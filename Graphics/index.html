@@ -5,11 +5,10 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=0.85">
-{% load static %}
+    {% load static %}
     <script type="text/javascript" src="{% static 'summernote/jquery-3.3.1.js' %}"></script>
     <link rel="stylesheet" href="{% static 'summernote/bootstrap.min.css' %}">
     <script type="text/javascript" src="{% static 'summernote/bootstrap.bundle.min.js' %}"></script>
-
     {{ form.media }}
 </head>
 <body>
@@ -22,21 +21,14 @@
         <p></p>
     </div>
     <div>
-
-        <form enctype="multipart/form-data" method="post">
+        <form enctype="multipart/form-data" method="POST">
             {% csrf_token %}
             {{ form.as_ul }}
-            <input type="submit" class="btn m-1" value="Сохранить">
+            <input type="submit" name="save" class="btn m-1" value="Сохранить">
+            <input type="submit" name="open" class="btn" value="Открыть">
         </form>
-
-        <div>
-            <form action="loadaction" method="GET">
-                {% csrf_token %}
-                <button type="submit" class="btn">Открыть файл</button>
-            </form>
-        </div>
-
     </div>
 </div>
 </body>
+
 </html>

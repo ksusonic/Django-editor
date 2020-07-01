@@ -215,3 +215,13 @@ fabric.properties
 .idea/sonarlint
 
 # End of https://www.toptal.com/developers/gitignore/api/pycharm,django
+.idea/.gitignore
+.idea/Work.iml
+.idea/dataSources.xml
+.idea/discord.xml
+.idea/inspectionProfiles/
+.idea/jsLibraryMappings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+Notes/
