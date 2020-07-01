@@ -8,7 +8,6 @@ Version |release|
 
 """
 import os
-
 try:
     from . import utils as ut
 except (SystemError, ValueError, ImportError):
@@ -20,7 +19,6 @@ try:
 except:
     import Tkinter as tk  # python 2
     import tkFont as tk_Font
-
 
 # -------------------------------------------------------------------
 #

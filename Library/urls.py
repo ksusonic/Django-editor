@@ -14,13 +14,17 @@ Including another URLconf
 """
 from django.conf import settings
 from django.conf.urls import url, include
+from Library.views import load
+from django.urls import path
 from django.conf.urls.static import static
 from Library.views import index
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
+
 urlpatterns = [
-    url(r'^$', index),
+    url(r'^$', index, name='index'),
     url(r'^summernote/', include('Scripts.django_summernote.urls')),
+    path('loadaction', load),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -93,6 +93,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "Graphics/static"),
     os.path.join(BASE_DIR, "Graphics/static/summernote"),
+
 )
 
 MEDIA_URL = '/media/'
