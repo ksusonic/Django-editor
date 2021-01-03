@@ -42,8 +42,8 @@ def fileboxSetup(default, filetypes):
     ALL_filetypes_was_specified = False
 
     if not filetypes:
-        filetypes = list()
-    filetypeObjects = list()
+        filetypes = []
+    filetypeObjects = []
 
     for filemask in filetypes:
         fto = FileTypeObject(filemask)
@@ -108,7 +108,7 @@ class FileTypeObject:
         if len(filemask) == 0:
             raise AssertionError('Filetype argument is empty.')
 
-        self.masks = list()
+        self.masks = []
 
         if isinstance(filemask, ut.basestring):  # a str or unicode
             self.initializeFromString(filemask)

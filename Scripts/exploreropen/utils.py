@@ -95,7 +95,7 @@ def uniquify_list_of_strings(input_list):
     :param list input_list: List of strings
     :return: New list with unique names as needed.
     """
-    output_list = list()
+    output_list = []
     for i, item in enumerate(input_list):
         tempList = input_list[:i] + input_list[i + 1:]
         if item not in tempList:
