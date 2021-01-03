@@ -16,7 +16,8 @@ class DjangoSummernoteConfig(AppConfig):
         super(DjangoSummernoteConfig, self).__init__(app_name, app_module)
         self.update_config()
 
-    def get_default_config(self):
+    @staticmethod
+    def get_default_config():
         return {
             # Using SummernoteWidget(iframe widget) for admin pages by default
             'iframe': True,
