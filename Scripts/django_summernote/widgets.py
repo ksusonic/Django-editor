@@ -17,7 +17,8 @@ __all__ = ['SummernoteWidget', 'SummernoteInplaceWidget']
 
 class SummernoteWidgetBase(forms.Textarea):
     @using_config
-    def summernote_settings(self):
+    @staticmethod
+    def summernote_settings():
         lang = get_proper_language()
 
         summernote_settings = config.get('summernote', {}).copy()
@@ -83,7 +84,8 @@ class SummernoteWidget(SummernoteWidgetBase):
 
 class SummernoteInplaceWidget(SummernoteWidgetBase):
     @using_config
-    def _media(self):
+    @staticmethod
+    def _media():
         return forms.Media(
             css={
                 'all': (
